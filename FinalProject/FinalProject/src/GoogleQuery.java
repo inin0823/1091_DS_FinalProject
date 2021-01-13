@@ -44,8 +44,8 @@ public class GoogleQuery
 	{
 		//this.searchKeyword = new String(searchKeyword.getBytes("UTF-8"),"UTF-8");
 		this.searchKeyword = searchKeyword;
-		this.url = "http://www.google.com/search?q="+searchKeyword+"&ie=UTF-8&num=30";
-	    urlContent = new URL("http://www.google.com/search?q="+searchKeyword+"&ie=UTF-8&num=20");
+		this.url = "http://www.google.com/search?q="+searchKeyword+"旅遊"+"懶人包"+"&ie=UTF-8&num=30";
+	    urlContent = new URL("http://www.google.com/search?q="+searchKeyword+"旅遊"+"懶人包"+"&ie=UTF-8&num=30");
 	    
 	}
 	private String fetchContent() throws IOException
@@ -158,7 +158,7 @@ public class GoogleQuery
  		 //System.out.println(doc.text());
 		 Map<Integer, String> retVal = new LinkedHashMap<Integer, String>();
 	     Elements contents = doc.select("span.aCOpRe");
-		ArrayList<String> list = new ArrayList<String>();
+		 ArrayList<String> list = new ArrayList<String>();
 	     for(Element content : contents)
  		{
 	    	 	String span= content.getElementsByTag("span").get(0).html();

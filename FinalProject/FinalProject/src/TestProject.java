@@ -77,7 +77,8 @@ public class TestProject extends HttpServlet {
 		    String value = entry.getValue();
 		    contentList.add(value);
 		}
-		for (int i=0;i<contentList.size();i++) {
+		int min = Math.min(titleList.size(), contentList.size());
+		for (int i=0;i<min;i++) {
 			 String key = titleList.get(i);
 			 String value = urlList.get(i);
 			 String content = contentList.get(i);
@@ -143,11 +144,11 @@ public class TestProject extends HttpServlet {
 		name.add("背包客");
 		weight.add(5.0);
 		weight.add(5.0);
+		weight.add(5.0);
 		weight.add(10.0);
 		weight.add(10.0);
-		weight.add(5.0);
-		weight.add(5.0);
-		weight.add(5.0);
+		weight.add(10.0);
+		weight.add(10.0);
 		weight.add(2.0);
 		weight.add(2.0);
 		weight.add(2.0);
